@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.container {
+    position: relative;
+    width: 510px;
+    height: 460px;
+    overflow: hidden;
+}
+.container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+.text1 {
+    padding: 40px;
+}
+.text1 span {
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+}
+.text2 {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    width: 130px;
+    border-right: solid 4px #fff;
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+}
+.text2 p {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fdfafa;
+    text-align:right;
+    padding-right: 18px;
+}
+.box {
+    width: 400px;
+    height: 1300px;
+    background-color:rgba(204, 192, 192, 0.699);
+    opacity: 0.5;
+    transform: rotate(-45deg) translateX(600%);
+    transition: all 0.6s ease-in-out;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(96, 96, 156, 0.432);  
+    z-index: -1;
+    opacity: 0.2;
+    transition: all 0.2 ease-in-out;
+
+}
+.container:hover .text2 {
+    opacity: 1;
+}
+.container:hover img {
+    transform: scale(1);
+}
+
+.container:hover .box {
+    transform: rotate(-45deg) translateX(-30%);
+
+}
+.container:hover .overlay {
+    opacity: 1;
+}
+  </style>  
+</head>
+<body>
+    <div class="container">
+        <div class="text1">
+            <span>STRONG <span style="font-weight: 600;">APOLLO</span></span>
+        </div>
+        <img src="https://tympanus.net/Development/HoverEffectIdeas/img/18.jpg" alt="">
+        <div class="text2">
+            <p>Apollo's last game of pool was so strange.</p>
+        </div>
+        <div class="box"></div>
+        <div class="overlay"></div>
+    </div>
+</body>
+</html>
